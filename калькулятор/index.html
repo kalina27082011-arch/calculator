@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0f172a">
+    <meta name="description" content="Простой калькулятор семейного бюджета — планируйте доходы, расходы и накопления без регистрации">
+    <title>Семейный бюджет — управляйте финансами просто</title>
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/landing.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="site-header__inner">
+        <a href="index.html" class="site-logo">💰 Семейный бюджет</a>
+        <nav class="site-nav">
+            <a href="index.html" class="is-active">Главная</a>
+            <a href="calculator.html">Калькулятор</a>
+        </nav>
+    </div>
+</header>
+
+<main class="page-landing">
+    <div class="container">
+        <section class="hero">
+            <span class="hero__badge">Бесплатно · Без регистрации</span>
+            <h1>Управляйте семейным бюджетом просто</h1>
+            <p>
+                Добавляйте доходы и расходы, отслеживайте накопления и понимайте,
+                куда уходят деньги. Все данные хранятся локально в вашем браузере.
+            </p>
+            <div class="hero__actions">
+                <a href="calculator.html" class="btn">Открыть калькулятор</a>
+                <a href="#features" class="btn btn--secondary">Узнать больше</a>
+            </div>
+        </section>
+
+        <section class="section" id="features">
+            <h2 class="section-title">Возможности</h2>
+            <p class="section-subtitle">Всё необходимое для планирования семейных финансов в одном месте</p>
+            <div class="features">
+                <article class="feature-card">
+                    <div class="feature-card__icon">📊</div>
+                    <h3>Доходы и расходы</h3>
+                    <p>Добавляйте неограниченное число статей. Разделяйте расходы на обязательные и переменные.</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-card__icon">🎯</div>
+                    <h3>Цель накоплений</h3>
+                    <p>Задайте желаемый процент откладываемых средств и следите, достигаете ли вы цели.</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-card__icon">💾</div>
+                    <h3>Автосохранение</h3>
+                    <p>Бюджет сохраняется автоматически. Экспортируйте и импортируйте данные в JSON.</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-card__icon">🌙</div>
+                    <h3>Тёмная и светлая тема</h3>
+                    <p>Комфортная работа днём и ночью. Тема запоминается между визитами.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section" id="how-it-works">
+            <h2 class="section-title">Как это работает</h2>
+            <p class="section-subtitle">Три простых шага к контролю над бюджетом</p>
+            <div class="steps">
+                <article class="step">
+                    <h3>Введите доходы</h3>
+                    <p>Зарплата, подработка, пособия — укажите все источники дохода семьи.</p>
+                </article>
+                <article class="step">
+                    <h3>Добавьте расходы</h3>
+                    <p>Аренда, продукты, транспорт — отметьте тип и категорию каждой статьи.</p>
+                </article>
+                <article class="step">
+                    <h3>Смотрите результат</h3>
+                    <p>Калькулятор покажет накопления, процент сбережений и структуру бюджета.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="cta">
+            <h2>Готовы начать?</h2>
+            <p>Откройте калькулятор и составьте свой первый семейный бюджет за пару минут.</p>
+            <a href="calculator.html" class="btn">Перейти к калькулятору</a>
+        </section>
+    </div>
+</main>
+
+<footer class="site-footer">
+    <p>© 2026 Семейный бюджет · Открытый проект</p>
+</footer>
+
+<button id="themeToggle" class="theme-toggle" type="button" aria-label="Переключить тему" title="Светлая тема">
+    <span class="theme-toggle__icon" aria-hidden="true">☀️</span>
+</button>
+
+<script src="assets/js/theme.js"></script>
+</body>
+</html>

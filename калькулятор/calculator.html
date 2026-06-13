@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0f172a">
+    <meta name="description" content="Калькулятор семейного бюджета — учёт доходов, расходов и накоплений">
+    <title>Калькулятор — Семейный бюджет</title>
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="site-header__inner">
+        <a href="index.html" class="site-logo">💰 Семейный бюджет</a>
+        <nav class="site-nav">
+            <a href="index.html">Главная</a>
+            <a href="calculator.html" class="is-active">Калькулятор</a>
+        </nav>
+    </div>
+</header>
+
+<main class="page-calculator">
+    <div class="container">
+        <h1>Калькулятор семейного бюджета</h1>
+
+        <div class="toolbar">
+            <button type="button" class="btn btn--secondary" id="exportBtn">📥 Экспорт JSON</button>
+            <label class="btn btn--secondary" for="importInput">📤 Импорт JSON</label>
+            <input type="file" id="importInput" accept=".json,application/json">
+            <button type="button" class="btn btn--secondary" id="printBtn">🖨️ Печать</button>
+            <button type="button" class="btn btn--danger" id="clearBtn">🗑️ Очистить</button>
+        </div>
+
+        <div class="goal-card">
+            <label for="savingsGoal">Цель накоплений:</label>
+            <input type="number" id="savingsGoal" value="20" min="0" max="100" step="1"> %
+            <p class="goal-hint" id="goalHint">Укажите, какой процент дохода хотите откладывать.</p>
+        </div>
+
+        <div class="grid">
+            <section class="card">
+                <h2>Доходы</h2>
+                <div id="incomeContainer"></div>
+                <button type="button" class="btn" id="addIncomeBtn">+ Добавить доход</button>
+            </section>
+
+            <section class="card">
+                <h2>Расходы</h2>
+                <div id="expenseContainer"></div>
+                <button type="button" class="btn" id="addExpenseBtn">+ Добавить расход</button>
+            </section>
+        </div>
+
+        <section class="summary">
+            <div class="result-grid">
+                <div class="result-card">
+                    <div class="result-title">Общий доход</div>
+                    <div class="result-value" id="totalIncome">0 ₽</div>
+                </div>
+                <div class="result-card">
+                    <div class="result-title">Обязательные расходы</div>
+                    <div class="result-value" id="fixedExpenses">0 ₽</div>
+                </div>
+                <div class="result-card">
+                    <div class="result-title">Переменные расходы</div>
+                    <div class="result-value" id="variableExpenses">0 ₽</div>
+                </div>
+                <div class="result-card">
+                    <div class="result-title">Все расходы</div>
+                    <div class="result-value" id="totalExpenses">0 ₽</div>
+                </div>
+                <div class="result-card">
+                    <div class="result-title">Накопления</div>
+                    <div class="result-value" id="savings">0 ₽</div>
+                </div>
+                <div class="result-card">
+                    <div class="result-title">Процент накоплений</div>
+                    <div class="result-value" id="savingsPercent">0%</div>
+                </div>
+            </div>
+
+            <div class="chart-card">
+                <h3>Структура бюджета</h3>
+                <div class="chart-bars" id="chartBars">
+                    <div class="chart-empty">Добавьте доходы и расходы, чтобы увидеть диаграмму</div>
+                </div>
+            </div>
+
+            <div class="status" id="status">Введите данные</div>
+            <p class="page-footer">Данные сохраняются автоматически в браузере</p>
+        </section>
+    </div>
+</main>
+
+<button id="themeToggle" class="theme-toggle" type="button" aria-label="Переключить тему" title="Светлая тема">
+    <span class="theme-toggle__icon" aria-hidden="true">☀️</span>
+</button>
+
+<script src="assets/js/theme.js"></script>
+<script src="assets/js/calculator.js"></script>
+</body>
+</html>
