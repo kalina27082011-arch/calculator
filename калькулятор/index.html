@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="ru" data-theme="dark">
 <head>
     <meta charset="UTF-8">
@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="assets/css/common.css">
     <link rel="stylesheet" href="assets/css/landing.css">
 </head>
-<body>
+<body class="landing-page">
 
 <header class="site-header">
     <div class="site-header__inner">
@@ -23,8 +23,16 @@
 </header>
 
 <main class="page-landing">
+    <div class="floral-ornaments" aria-hidden="true">
+        <div class="floral-ornament floral-ornament--tl"></div>
+        <div class="floral-ornament floral-ornament--tr"></div>
+        <div class="floral-ornament floral-ornament--bl"></div>
+        <div class="floral-ornament floral-ornament--br"></div>
+    </div>
+
     <div class="container">
         <section class="hero">
+            <div class="section-ornament section-ornament--top" aria-hidden="true"></div>
             <span class="hero__badge">Бесплатно · Без регистрации</span>
             <h1>Управляйте семейным бюджетом просто</h1>
             <p>
@@ -36,6 +44,8 @@
                 <a href="#features" class="btn btn--secondary">Узнать больше</a>
             </div>
         </section>
+
+        <div class="section-ornament" aria-hidden="true"></div>
 
         <section class="section" id="features">
             <h2 class="section-title">Возможности</h2>
@@ -64,6 +74,8 @@
             </div>
         </section>
 
+        <div class="section-ornament" aria-hidden="true"></div>
+
         <section class="section" id="how-it-works">
             <h2 class="section-title">Как это работает</h2>
             <p class="section-subtitle">Три простых шага к контролю над бюджетом</p>
@@ -83,7 +95,11 @@
             </div>
         </section>
 
+        <div class="section-ornament" aria-hidden="true"></div>
+
         <section class="cta">
+            <div class="cta__ornament cta__ornament--left" aria-hidden="true"></div>
+            <div class="cta__ornament cta__ornament--right" aria-hidden="true"></div>
             <h2>Готовы начать?</h2>
             <p>Откройте калькулятор и составьте свой первый семейный бюджет за пару минут.</p>
             <a href="calculator.html" class="btn">Перейти к калькулятору</a>
@@ -92,6 +108,7 @@
 </main>
 
 <footer class="site-footer">
+    <div class="section-ornament section-ornament--footer" aria-hidden="true"></div>
     <p>© 2026 Семейный бюджет · Открытый проект</p>
 </footer>
 
@@ -100,5 +117,7 @@
 </button>
 
 <script src="assets/js/theme.js"></script>
+</body>
+</html>
 </body>
 </html>
