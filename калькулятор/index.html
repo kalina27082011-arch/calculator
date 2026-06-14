@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru" data-theme="dark">
 <head>
     <meta charset="UTF-8">
@@ -12,6 +12,51 @@
 </head>
 <body class="landing-page">
 
+<!-- SVG-спрайт: цветочный орнамент -->
+<svg xmlns="http://www.w3.org/2000/svg" class="floral-sprite" aria-hidden="true">
+    <defs>
+        <symbol id="floral-corner" viewBox="0 0 240 240" fill="none">
+            <path d="M0 200 C40 180 60 140 80 100 C95 70 110 45 130 30" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M0 160 C50 150 70 110 95 75 C110 55 125 35 150 20" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity="0.7"/>
+            <path d="M30 0 C35 35 55 60 80 80 C100 95 130 105 160 110" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <ellipse cx="130" cy="30" rx="14" ry="10" transform="rotate(-30 130 30)" fill="currentColor" opacity="0.35"/>
+            <ellipse cx="130" cy="30" rx="10" ry="14" transform="rotate(30 130 30)" fill="currentColor" opacity="0.35"/>
+            <ellipse cx="130" cy="30" rx="12" ry="12" transform="rotate(75 130 30)" fill="currentColor" opacity="0.25"/>
+            <ellipse cx="130" cy="30" rx="11" ry="13" transform="rotate(-75 130 30)" fill="currentColor" opacity="0.25"/>
+            <circle cx="130" cy="30" r="6" fill="currentColor" opacity="0.5"/>
+            <ellipse cx="160" cy="110" rx="12" ry="9" transform="rotate(-20 160 110)" fill="currentColor" opacity="0.3"/>
+            <ellipse cx="160" cy="110" rx="9" ry="12" transform="rotate(40 160 110)" fill="currentColor" opacity="0.3"/>
+            <circle cx="160" cy="110" r="5" fill="currentColor" opacity="0.45"/>
+            <ellipse cx="80" cy="80" rx="10" ry="7" transform="rotate(-15 80 80)" fill="currentColor" opacity="0.28"/>
+            <ellipse cx="80" cy="80" rx="7" ry="10" transform="rotate(45 80 80)" fill="currentColor" opacity="0.28"/>
+            <circle cx="80" cy="80" r="4" fill="currentColor" opacity="0.4"/>
+            <path d="M95 75 Q105 65 115 70 Q108 78 95 75Z" fill="currentColor" opacity="0.35"/>
+            <path d="M55 55 Q48 42 58 38 Q65 48 55 55Z" fill="currentColor" opacity="0.3"/>
+            <path d="M110 95 Q100 88 105 78 Q115 85 110 95Z" fill="currentColor" opacity="0.3"/>
+            <path d="M70 130 Q60 125 65 115 Q78 118 70 130Z" fill="currentColor" opacity="0.28"/>
+            <path d="M150 20 Q158 12 168 18 Q162 28 150 20Z" fill="currentColor" opacity="0.32"/>
+            <circle cx="58" cy="38" r="3" fill="currentColor" opacity="0.35"/>
+            <circle cx="168" cy="18" r="3" fill="currentColor" opacity="0.35"/>
+        </symbol>
+        <symbol id="floral-divider" viewBox="0 0 480 48" fill="none">
+            <path d="M0 24 H170" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity="0.6"/>
+            <path d="M310 24 H480" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity="0.6"/>
+            <path d="M168 24 C175 18 182 18 188 24 C194 30 201 30 208 24" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+            <path d="M272 24 C279 18 286 18 292 24 C298 30 305 30 312 24" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+            <ellipse cx="240" cy="24" rx="16" ry="11" fill="currentColor" opacity="0.3"/>
+            <ellipse cx="240" cy="24" rx="11" ry="16" transform="rotate(45 240 24)" fill="currentColor" opacity="0.3"/>
+            <ellipse cx="240" cy="24" rx="14" ry="14" transform="rotate(22 240 24)" fill="currentColor" opacity="0.22"/>
+            <circle cx="240" cy="24" r="7" fill="currentColor" opacity="0.5"/>
+            <ellipse cx="210" cy="24" rx="8" ry="6" transform="rotate(-20 210 24)" fill="currentColor" opacity="0.25"/>
+            <ellipse cx="270" cy="24" rx="8" ry="6" transform="rotate(20 270 24)" fill="currentColor" opacity="0.25"/>
+            <path d="M228 14 Q222 8 228 4 Q236 8 228 14Z" fill="currentColor" opacity="0.32"/>
+            <path d="M252 14 Q258 8 252 4 Q244 8 252 14Z" fill="currentColor" opacity="0.32"/>
+            <path d="M228 34 Q222 40 228 44 Q236 40 228 34Z" fill="currentColor" opacity="0.32"/>
+            <path d="M252 34 Q258 40 252 44 Q244 40 252 34Z" fill="currentColor" opacity="0.32"/>
+        </symbol>
+    </defs>
+</svg>
+
 <header class="site-header">
     <div class="site-header__inner">
         <a href="index.html" class="site-logo">💰 Семейный бюджет</a>
@@ -24,16 +69,22 @@
 
 <main class="page-landing">
     <div class="floral-ornaments" aria-hidden="true">
-        <div class="floral-ornament floral-ornament--tl"></div>
-        <div class="floral-ornament floral-ornament--tr"></div>
-        <div class="floral-ornament floral-ornament--bl"></div>
-        <div class="floral-ornament floral-ornament--br"></div>
+        <svg class="floral-ornament floral-ornament--tl"><use href="#floral-corner"/></svg>
+        <svg class="floral-ornament floral-ornament--tr"><use href="#floral-corner"/></svg>
+        <svg class="floral-ornament floral-ornament--bl"><use href="#floral-corner"/></svg>
+        <svg class="floral-ornament floral-ornament--br"><use href="#floral-corner"/></svg>
     </div>
 
     <div class="container">
         <section class="hero">
-            <div class="section-ornament section-ornament--top" aria-hidden="true"></div>
-            <span class="hero__badge">Бесплатно · Без регистрации</span>
+            <svg class="section-ornament section-ornament--top" aria-hidden="true"><use href="#floral-divider"/></svg>
+
+            <div class="hero__frame" aria-hidden="true">
+                <svg class="hero__frame-corner hero__frame-corner--tl"><use href="#floral-corner"/></svg>
+                <svg class="hero__frame-corner hero__frame-corner--tr"><use href="#floral-corner"/></svg>
+            </div>
+
+            <span class="hero__badge">🌸 Бесплатно · Без регистрации</span>
             <h1>Управляйте семейным бюджетом просто</h1>
             <p>
                 Добавляйте доходы и расходы, отслеживайте накопления и понимайте,
@@ -45,28 +96,32 @@
             </div>
         </section>
 
-        <div class="section-ornament" aria-hidden="true"></div>
+        <svg class="section-ornament" aria-hidden="true"><use href="#floral-divider"/></svg>
 
         <section class="section" id="features">
             <h2 class="section-title">Возможности</h2>
             <p class="section-subtitle">Всё необходимое для планирования семейных финансов в одном месте</p>
             <div class="features">
                 <article class="feature-card">
+                    <svg class="feature-card__floral" aria-hidden="true"><use href="#floral-corner"/></svg>
                     <div class="feature-card__icon">📊</div>
                     <h3>Доходы и расходы</h3>
                     <p>Добавляйте неограниченное число статей. Разделяйте расходы на обязательные и переменные.</p>
                 </article>
                 <article class="feature-card">
+                    <svg class="feature-card__floral" aria-hidden="true"><use href="#floral-corner"/></svg>
                     <div class="feature-card__icon">🎯</div>
                     <h3>Цель накоплений</h3>
                     <p>Задайте желаемый процент откладываемых средств и следите, достигаете ли вы цели.</p>
                 </article>
                 <article class="feature-card">
+                    <svg class="feature-card__floral" aria-hidden="true"><use href="#floral-corner"/></svg>
                     <div class="feature-card__icon">💾</div>
                     <h3>Автосохранение</h3>
                     <p>Бюджет сохраняется автоматически. Экспортируйте и импортируйте данные в JSON.</p>
                 </article>
                 <article class="feature-card">
+                    <svg class="feature-card__floral" aria-hidden="true"><use href="#floral-corner"/></svg>
                     <div class="feature-card__icon">🌙</div>
                     <h3>Тёмная и светлая тема</h3>
                     <p>Комфортная работа днём и ночью. Тема запоминается между визитами.</p>
@@ -74,7 +129,7 @@
             </div>
         </section>
 
-        <div class="section-ornament" aria-hidden="true"></div>
+        <svg class="section-ornament" aria-hidden="true"><use href="#floral-divider"/></svg>
 
         <section class="section" id="how-it-works">
             <h2 class="section-title">Как это работает</h2>
@@ -95,11 +150,11 @@
             </div>
         </section>
 
-        <div class="section-ornament" aria-hidden="true"></div>
+        <svg class="section-ornament" aria-hidden="true"><use href="#floral-divider"/></svg>
 
         <section class="cta">
-            <div class="cta__ornament cta__ornament--left" aria-hidden="true"></div>
-            <div class="cta__ornament cta__ornament--right" aria-hidden="true"></div>
+            <svg class="cta__ornament cta__ornament--left" aria-hidden="true"><use href="#floral-corner"/></svg>
+            <svg class="cta__ornament cta__ornament--right" aria-hidden="true"><use href="#floral-corner"/></svg>
             <h2>Готовы начать?</h2>
             <p>Откройте калькулятор и составьте свой первый семейный бюджет за пару минут.</p>
             <a href="calculator.html" class="btn">Перейти к калькулятору</a>
@@ -108,7 +163,7 @@
 </main>
 
 <footer class="site-footer">
-    <div class="section-ornament section-ornament--footer" aria-hidden="true"></div>
+    <svg class="section-ornament section-ornament--footer" aria-hidden="true"><use href="#floral-divider"/></svg>
     <p>© 2026 Семейный бюджет · Открытый проект</p>
 </footer>
 
@@ -119,5 +174,6 @@
 <script src="assets/js/theme.js"></script>
 </body>
 </html>
+
 </body>
 </html>
