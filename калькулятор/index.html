@@ -9,6 +9,7 @@
     <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="assets/css/common.css">
     <link rel="stylesheet" href="assets/css/landing.css">
+    <link rel="stylesheet" href="assets/css/calculator.css">
 </head>
 <body class="landing-page">
 
@@ -59,121 +60,199 @@
 
 <header class="site-header">
     <div class="site-header__inner">
-        <a href="index.html" class="site-logo">💰 Семейный бюджет</a>
+        <a href="#" class="site-logo" data-nav="landing">💰 Семейный бюджет</a>
         <nav class="site-nav">
-            <a href="index.html" class="is-active">Главная</a>
-            <a href="calculator.html">Калькулятор</a>
+            <a href="#" data-nav="landing" class="is-active">Главная</a>
+            <a href="#" data-nav="calculator">Калькулятор</a>
         </nav>
     </div>
 </header>
 
-<main class="page-landing">
-    <div class="floral-ornaments" aria-hidden="true">
-        <svg class="floral-ornament floral-ornament--tl"><use href="#floral-corner"/></svg>
-        <svg class="floral-ornament floral-ornament--tr"><use href="#floral-corner"/></svg>
-        <svg class="floral-ornament floral-ornament--bl"><use href="#floral-corner"/></svg>
-        <svg class="floral-ornament floral-ornament--br"><use href="#floral-corner"/></svg>
-    </div>
+<!-- Лендинг -->
+<div id="view-landing" class="app-view is-active">
+    <main class="page-landing">
+        <div class="floral-ornaments" aria-hidden="true">
+            <svg class="floral-ornament floral-ornament--tl"><use href="#floral-corner"/></svg>
+            <svg class="floral-ornament floral-ornament--tr"><use href="#floral-corner"/></svg>
+            <svg class="floral-ornament floral-ornament--bl"><use href="#floral-corner"/></svg>
+            <svg class="floral-ornament floral-ornament--br"><use href="#floral-corner"/></svg>
+        </div>
 
-    <div class="container">
-        <section class="hero">
-            <svg class="section-ornament section-ornament--top" aria-hidden="true"><use href="#floral-divider"/></svg>
+        <div class="container">
+            <section class="hero">
+                <svg class="section-ornament section-ornament--top" aria-hidden="true"><use href="#floral-divider"/></svg>
 
-            <div class="hero__frame" aria-hidden="true">
-                <svg class="hero__frame-corner hero__frame-corner--tl"><use href="#floral-corner"/></svg>
-                <svg class="hero__frame-corner hero__frame-corner--tr"><use href="#floral-corner"/></svg>
+                <div class="hero__frame" aria-hidden="true">
+                    <svg class="hero__frame-corner hero__frame-corner--tl"><use href="#floral-corner"/></svg>
+                    <svg class="hero__frame-corner hero__frame-corner--tr"><use href="#floral-corner"/></svg>
+                </div>
+
+                <span class="hero__badge">🌸 Бесплатно · Без регистрации</span>
+                <h1>Управляйте семейным бюджетом просто</h1>
+                <p>
+                    Добавляйте доходы и расходы, отслеживайте накопления и понимайте,
+                    куда уходят деньги. Все данные хранятся локально в вашем браузере.
+                </p>
+                <div class="hero__actions">
+                    <button type="button" class="btn" data-show-view="calculator">Открыть калькулятор</button>
+                    <a href="#features" class="btn btn--secondary">Узнать больше</a>
+                </div>
+            </section>
+
+            <svg class="section-ornament" aria-hidden="true"><use href="#floral-divider"/></svg>
+
+            <section class="section" id="features">
+                <h2 class="section-title">Возможности</h2>
+                <p class="section-subtitle">Всё необходимое для планирования семейных финансов в одном месте</p>
+                <div class="features">
+                    <article class="feature-card">
+                        <svg class="feature-card__floral" aria-hidden="true"><use href="#floral-corner"/></svg>
+                        <div class="feature-card__icon">📊</div>
+                        <h3>Доходы и расходы</h3>
+                        <p>Добавляйте неограниченное число статей. Разделяйте расходы на обязательные и переменные.</p>
+                    </article>
+                    <article class="feature-card">
+                        <svg class="feature-card__floral" aria-hidden="true"><use href="#floral-corner"/></svg>
+                        <div class="feature-card__icon">🎯</div>
+                        <h3>Цель накоплений</h3>
+                        <p>Задайте желаемый процент откладываемых средств и следите, достигаете ли вы цели.</p>
+                    </article>
+                    <article class="feature-card">
+                        <svg class="feature-card__floral" aria-hidden="true"><use href="#floral-corner"/></svg>
+                        <div class="feature-card__icon">💾</div>
+                        <h3>Автосохранение</h3>
+                        <p>Бюджет сохраняется автоматически. Экспортируйте и импортируйте данные в JSON.</p>
+                    </article>
+                    <article class="feature-card">
+                        <svg class="feature-card__floral" aria-hidden="true"><use href="#floral-corner"/></svg>
+                        <div class="feature-card__icon">🌙</div>
+                        <h3>Тёмная и светлая тема</h3>
+                        <p>Комфортная работа днём и ночью. Тема запоминается между визитами.</p>
+                    </article>
+                </div>
+            </section>
+
+            <svg class="section-ornament" aria-hidden="true"><use href="#floral-divider"/></svg>
+
+            <section class="section" id="how-it-works">
+                <h2 class="section-title">Как это работает</h2>
+                <p class="section-subtitle">Три простых шага к контролю над бюджетом</p>
+                <div class="steps">
+                    <article class="step">
+                        <h3>Введите доходы</h3>
+                        <p>Зарплата, подработка, пособия — укажите все источники дохода семьи.</p>
+                    </article>
+                    <article class="step">
+                        <h3>Добавьте расходы</h3>
+                        <p>Аренда, продукты, транспорт — отметьте тип и категорию каждой статьи.</p>
+                    </article>
+                    <article class="step">
+                        <h3>Смотрите результат</h3>
+                        <p>Калькулятор покажет накопления, процент сбережений и структуру бюджета.</p>
+                    </article>
+                </div>
+            </section>
+
+            <svg class="section-ornament" aria-hidden="true"><use href="#floral-divider"/></svg>
+
+            <section class="cta">
+                <svg class="cta__ornament cta__ornament--left" aria-hidden="true"><use href="#floral-corner"/></svg>
+                <svg class="cta__ornament cta__ornament--right" aria-hidden="true"><use href="#floral-corner"/></svg>
+                <h2>Готовы начать?</h2>
+                <p>Откройте калькулятор и составьте свой первый семейный бюджет за пару минут.</p>
+                <button type="button" class="btn" data-show-view="calculator">Перейти к калькулятору</button>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <svg class="section-ornament section-ornament--footer" aria-hidden="true"><use href="#floral-divider"/></svg>
+        <p>© 2026 Семейный бюджет · Открытый проект</p>
+    </footer>
+</div>
+
+<!-- Калькулятор -->
+<div id="view-calculator" class="app-view" hidden>
+    <main class="page-calculator">
+        <div class="container">
+            <h1>Калькулятор семейного бюджета</h1>
+
+            <div class="toolbar">
+                <button type="button" class="btn btn--secondary" id="exportBtn">📥 Экспорт JSON</button>
+                <label class="btn btn--secondary" for="importInput">📤 Импорт JSON</label>
+                <input type="file" id="importInput" accept=".json,application/json">
+                <button type="button" class="btn btn--secondary" id="printBtn">🖨️ Печать</button>
+                <button type="button" class="btn btn--danger" id="clearBtn">🗑️ Очистить</button>
             </div>
 
-            <span class="hero__badge">🌸 Бесплатно · Без регистрации</span>
-            <h1>Управляйте семейным бюджетом просто</h1>
-            <p>
-                Добавляйте доходы и расходы, отслеживайте накопления и понимайте,
-                куда уходят деньги. Все данные хранятся локально в вашем браузере.
-            </p>
-            <div class="hero__actions">
-                <a href="calculator.html" class="btn">Открыть калькулятор</a>
-                <a href="#features" class="btn btn--secondary">Узнать больше</a>
+            <div class="goal-card">
+                <label for="savingsGoal">Цель накоплений:</label>
+                <input type="number" id="savingsGoal" value="20" min="0" max="100" step="1"> %
+                <p class="goal-hint" id="goalHint">Укажите, какой процент дохода хотите откладывать.</p>
             </div>
-        </section>
 
-        <svg class="section-ornament" aria-hidden="true"><use href="#floral-divider"/></svg>
+            <div class="grid">
+                <section class="card">
+                    <h2>Доходы</h2>
+                    <div id="incomeContainer"></div>
+                    <button type="button" class="btn" id="addIncomeBtn">+ Добавить доход</button>
+                </section>
 
-        <section class="section" id="features">
-            <h2 class="section-title">Возможности</h2>
-            <p class="section-subtitle">Всё необходимое для планирования семейных финансов в одном месте</p>
-            <div class="features">
-                <article class="feature-card">
-                    <svg class="feature-card__floral" aria-hidden="true"><use href="#floral-corner"/></svg>
-                    <div class="feature-card__icon">📊</div>
-                    <h3>Доходы и расходы</h3>
-                    <p>Добавляйте неограниченное число статей. Разделяйте расходы на обязательные и переменные.</p>
-                </article>
-                <article class="feature-card">
-                    <svg class="feature-card__floral" aria-hidden="true"><use href="#floral-corner"/></svg>
-                    <div class="feature-card__icon">🎯</div>
-                    <h3>Цель накоплений</h3>
-                    <p>Задайте желаемый процент откладываемых средств и следите, достигаете ли вы цели.</p>
-                </article>
-                <article class="feature-card">
-                    <svg class="feature-card__floral" aria-hidden="true"><use href="#floral-corner"/></svg>
-                    <div class="feature-card__icon">💾</div>
-                    <h3>Автосохранение</h3>
-                    <p>Бюджет сохраняется автоматически. Экспортируйте и импортируйте данные в JSON.</p>
-                </article>
-                <article class="feature-card">
-                    <svg class="feature-card__floral" aria-hidden="true"><use href="#floral-corner"/></svg>
-                    <div class="feature-card__icon">🌙</div>
-                    <h3>Тёмная и светлая тема</h3>
-                    <p>Комфортная работа днём и ночью. Тема запоминается между визитами.</p>
-                </article>
+                <section class="card">
+                    <h2>Расходы</h2>
+                    <div id="expenseContainer"></div>
+                    <button type="button" class="btn" id="addExpenseBtn">+ Добавить расход</button>
+                </section>
             </div>
-        </section>
 
-        <svg class="section-ornament" aria-hidden="true"><use href="#floral-divider"/></svg>
+            <section class="summary">
+                <div class="result-grid">
+                    <div class="result-card">
+                        <div class="result-title">Общий доход</div>
+                        <div class="result-value" id="totalIncome">0 ₽</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-title">Обязательные расходы</div>
+                        <div class="result-value" id="fixedExpenses">0 ₽</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-title">Переменные расходы</div>
+                        <div class="result-value" id="variableExpenses">0 ₽</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-title">Все расходы</div>
+                        <div class="result-value" id="totalExpenses">0 ₽</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-title">Накопления</div>
+                        <div class="result-value" id="savings">0 ₽</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-title">Процент накоплений</div>
+                        <div class="result-value" id="savingsPercent">0%</div>
+                    </div>
+                </div>
 
-        <section class="section" id="how-it-works">
-            <h2 class="section-title">Как это работает</h2>
-            <p class="section-subtitle">Три простых шага к контролю над бюджетом</p>
-            <div class="steps">
-                <article class="step">
-                    <h3>Введите доходы</h3>
-                    <p>Зарплата, подработка, пособия — укажите все источники дохода семьи.</p>
-                </article>
-                <article class="step">
-                    <h3>Добавьте расходы</h3>
-                    <p>Аренда, продукты, транспорт — отметьте тип и категорию каждой статьи.</p>
-                </article>
-                <article class="step">
-                    <h3>Смотрите результат</h3>
-                    <p>Калькулятор покажет накопления, процент сбережений и структуру бюджета.</p>
-                </article>
-            </div>
-        </section>
+                <div class="chart-card">
+                    <h3>Структура бюджета</h3>
+                    <div class="chart-bars" id="chartBars">
+                        <div class="chart-empty">Добавьте доходы и расходы, чтобы увидеть диаграмму</div>
+                    </div>
+                </div>
 
-        <svg class="section-ornament" aria-hidden="true"><use href="#floral-divider"/></svg>
-
-        <section class="cta">
-            <svg class="cta__ornament cta__ornament--left" aria-hidden="true"><use href="#floral-corner"/></svg>
-            <svg class="cta__ornament cta__ornament--right" aria-hidden="true"><use href="#floral-corner"/></svg>
-            <h2>Готовы начать?</h2>
-            <p>Откройте калькулятор и составьте свой первый семейный бюджет за пару минут.</p>
-            <a href="calculator.html" class="btn">Перейти к калькулятору</a>
-        </section>
-    </div>
-</main>
-
-<footer class="site-footer">
-    <svg class="section-ornament section-ornament--footer" aria-hidden="true"><use href="#floral-divider"/></svg>
-    <p>© 2026 Семейный бюджет · Открытый проект</p>
-</footer>
+                <div class="status" id="status">Введите данные</div>
+                <p class="page-footer">Данные сохраняются автоматически в браузере</p>
+            </section>
+        </div>
+    </main>
+</div>
 
 <button id="themeToggle" class="theme-toggle" type="button" aria-label="Переключить тему" title="Светлая тема">
     <span class="theme-toggle__icon" aria-hidden="true">☀️</span>
 </button>
 
 <script src="assets/js/theme.js"></script>
-</body>
-</html>
-
+<script src="assets/js/calculator.js"></script>
+<script src="assets/js/app.js"></script>
 </body>
 </html>
