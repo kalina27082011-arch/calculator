@@ -124,6 +124,10 @@ body {
     transition: color 0.2s, background 0.2s;
 }
 
+.app-view:not(.is-active) {
+    display: none;
+}
+
 .site-nav a:hover,
 .site-nav a.is-active {
     color: var(--text-primary);
